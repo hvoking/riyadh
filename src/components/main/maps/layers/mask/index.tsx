@@ -6,17 +6,26 @@ import { useMask } from '../../../../context/mask';
 
 // Third-party imports
 import { Source, Layer } from 'react-map-gl';
+import * as d3 from 'd3';
 
-const getColor = (item: any) => {
-	const { r, g, b, a } = item;
-	const color = `rgba(${r * 255}, ${g * 255}, ${b * 255}, ${a})`;
-	return color;
+const hexToRgba = (hex: string, alpha: number = 1) => {
+	if (hex) {
+	    const r = parseInt(hex.slice(1, 3), 16);
+	    const g = parseInt(hex.slice(3, 5), 16);
+	    const b = parseInt(hex.slice(5, 7), 16);
+	    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+    }
+    return `rgba(255, 255, 255, 0.2)`;
 };
 
 export const Mask = () => {
 	const { maskProperties } = useMask();
 
 	if (!maskProperties) return <></>;
+
+	const scaleLinear = d3.scaleLinear()
+		.range([50, 100])
+		.domain([0, 10000])
 
 	// Filter by fill color
 	const features = maskProperties.filter((item: any) => {
@@ -25,13 +34,16 @@ export const Mask = () => {
     });
 
 	const updatedFeatures = features.map((item: any) => {
-		const currentColor = getColor(item.layer.paint["fill-color"]);
+		const zoningColor = hexToRgba(item.properties.zoning_color);
+		const priceOfMeter = scaleLinear(item.properties.price_of_meter);
+
 		return {
 			type: "Feature",
 			geometry: item.geometry,
 			properties: {
 				...item.properties, 
-				'fill-color': currentColor
+				'zoning-color': zoningColor,
+				'price-of-meter': priceOfMeter
 			}
 		};
 	});
@@ -60,8 +72,8 @@ export const Mask = () => {
 		          id="extruded-polygons"
 		          type="fill-extrusion"
 		          paint={{
-		            'fill-extrusion-color': ['get', 'fill-color'],
-		            'fill-extrusion-height': 1000,
+		            'fill-extrusion-color': ['get', 'zoning-color'],
+		            'fill-extrusion-height': ['get', 'price-of-meter'],
 		            'fill-extrusion-base': 0,
 		            'fill-extrusion-opacity': 1
 		          }}

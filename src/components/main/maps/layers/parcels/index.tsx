@@ -37,7 +37,7 @@ export const Parcels = () => {
 		maxzoom: 22,
 		paint: {
 			'fill-color': 'rgba(255, 255, 255, 1)',
-			'fill-opacity': 0.5,
+			'fill-opacity': 0.1,
 		},
 	};
 
