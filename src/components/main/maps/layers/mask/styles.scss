@@ -1,0 +1,18 @@
+.download-button {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	z-index: 10;
+	background-color: rgba(0, 78, 65, 1);
+	border-radius: 20px;
+	color: rgba(255, 255, 255, 1);
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+.download-button:hover {
+	background-color: rgba(20, 98, 85, 1);
+}
