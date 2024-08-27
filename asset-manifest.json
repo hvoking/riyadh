@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/parcels/static/css/main.ba814738.css",
-    "main.js": "/parcels/static/js/main.bf8056ec.js",
-    "static/js/879.550f1258.chunk.js": "/parcels/static/js/879.550f1258.chunk.js",
-    "index.html": "/parcels/index.html",
-    "main.ba814738.css.map": "/parcels/static/css/main.ba814738.css.map",
-    "main.bf8056ec.js.map": "/parcels/static/js/main.bf8056ec.js.map",
-    "879.550f1258.chunk.js.map": "/parcels/static/js/879.550f1258.chunk.js.map"
+    "main.css": "/riyadh/static/css/main.ba814738.css",
+    "main.js": "/riyadh/static/js/main.a986aec7.js",
+    "static/js/879.9f1c8221.chunk.js": "/riyadh/static/js/879.9f1c8221.chunk.js",
+    "index.html": "/riyadh/index.html",
+    "main.ba814738.css.map": "/riyadh/static/css/main.ba814738.css.map",
+    "main.a986aec7.js.map": "/riyadh/static/js/main.a986aec7.js.map",
+    "879.9f1c8221.chunk.js.map": "/riyadh/static/js/879.9f1c8221.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ba814738.css",
-    "static/js/main.bf8056ec.js"
+    "static/js/main.a986aec7.js"
   ]
 }
