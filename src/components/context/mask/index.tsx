@@ -20,8 +20,8 @@ export const MaskProvider = ({children}: any) => {
 	const { mapRef } = useMapProperties();
 	const { circleGeometry } = useCircle();
 
-	const [mapFeatures, setMapFeatures] = useState([]);
-	const [activeFeatures, setActiveFeatures] = useState(false);
+	const [ mapFeatures, setMapFeatures ] = useState([]);
+	const [ activeFeatures, setActiveFeatures ] = useState(false);
 
 	useEffect(() => {
 		const map = mapRef.current;
@@ -37,13 +37,13 @@ export const MaskProvider = ({children}: any) => {
 	    return () => {
 	        map.off('data', onData);
 	    };
-	}, [mapRef.current]);
+	}, [ mapRef.current ]);
 
 	useEffect(() => {
 		const map = mapRef.current;
 		if (!map) return;
 		setMapFeatures(map.queryRenderedFeatures());
-	}, [activeFeatures, mapRef.current]);
+	}, [ activeFeatures, mapRef.current ]);
 
 	const maskProperties = useMemo(() => {
 	    return mapFeatures.filter((item: any) => {
@@ -53,7 +53,7 @@ export const MaskProvider = ({children}: any) => {
 	            return turf.booleanPointInPolygon(featureCentroid, circleGeometry);
 	        }
 	    });
-	}, [mapFeatures, circleGeometry]);
+	}, [ mapFeatures, circleGeometry ]);
 
 	return (
 		<MaskContext.Provider value={{ maskProperties }}>

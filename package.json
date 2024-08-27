@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hvoking.github.io/parcels",
+  "homepage": "https://hvoking.github.io/riyadh",
   "dependencies": {
     "@turf/turf": "^7.1.0",
     "@types/d3": "^7.4.3",

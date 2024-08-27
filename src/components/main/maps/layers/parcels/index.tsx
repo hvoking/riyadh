@@ -48,8 +48,6 @@ export const Parcels = () => {
 			tiles={[url]}
 		>
 			<Layer {...parcelLayer}/>
-			<Layer {...parcelLineLayer}/>
-			<Layer {...parcelHoverFillLayer}/>
 		</Source>
 	)
 }
