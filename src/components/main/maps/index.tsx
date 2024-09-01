@@ -1,5 +1,6 @@
 // App imports
 import { Wrapper } from './wrapper';
+import { Tiles } from './tiles';
 import { Layers } from './layers';
 import { Navigation } from './nav';
 
@@ -30,6 +31,7 @@ export const Maps = () => {
                 onTouchEnd={onDragEnd}
                 dragPan={!isDragging}
 			>	
+				<Tiles/>
 				<Layers/>
 				<Navigation/>
 			</Map>

@@ -1,6 +1,6 @@
 import { Source, Layer, LayerProps } from 'react-map-gl';
 
-export const Parcels = () => {
+export const Tiles = () => {
 	const url = `https://tiles.suhail.ai/maps/riyadh/{z}/{x}/{y}.vector.pbf?`;
 
 	const parcelLayer: LayerProps = {
@@ -52,4 +52,4 @@ export const Parcels = () => {
 	)
 }
 
-Parcels.displayName = "Parcels";
+Tiles.displayName = "Tiles";

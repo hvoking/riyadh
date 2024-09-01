@@ -13,7 +13,7 @@ export const Circle = () => {
         source: 'polygon',
         paint: {
             "fill-color": "rgb(255, 255, 255)",
-            "fill-opacity": 0.1
+            "fill-opacity": 0.2
         }
     };
 
