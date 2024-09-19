@@ -55,8 +55,19 @@ export const MaskProvider = ({children}: any) => {
 	    });
 	}, [ mapFeatures, circleGeometry ]);
 
+	// Function to download geoJsonData as a file
+	const downloadGeoJson = (data: any) => {
+		const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(data));
+		const downloadAnchorNode = document.createElement('a');
+		downloadAnchorNode.setAttribute("href", dataStr);
+		downloadAnchorNode.setAttribute("download", "data.geojson");
+		document.body.appendChild(downloadAnchorNode); // required for firefox
+		downloadAnchorNode.click();
+		downloadAnchorNode.remove();
+	};
+
 	return (
-		<MaskContext.Provider value={{ maskProperties }}>
+		<MaskContext.Provider value={{ maskProperties, downloadGeoJson }}>
 			{children}
 		</MaskContext.Provider>
 	)

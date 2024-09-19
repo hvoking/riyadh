@@ -19,7 +19,7 @@ const hexToRgba = (hex: string, alpha: number = 1) => {
 };
 
 export const Mask = () => {
-	const { maskProperties } = useMask();
+	const { maskProperties, downloadGeoJson } = useMask();
 
 	if (!maskProperties) return <></>;
 
@@ -53,20 +53,9 @@ export const Mask = () => {
         "features": updatedFeatures
     };
 
-	// Function to download geoJsonData as a file
-	const downloadGeoJson = () => {
-		const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(geoJsonData));
-		const downloadAnchorNode = document.createElement('a');
-		downloadAnchorNode.setAttribute("href", dataStr);
-		downloadAnchorNode.setAttribute("download", "data.geojson");
-		document.body.appendChild(downloadAnchorNode); // required for firefox
-		downloadAnchorNode.click();
-		downloadAnchorNode.remove();
-	};
-
 	return (
 		<>
-			<button className="download-button" onClick={downloadGeoJson}>Download GeoJSON</button>
+			<button className="download-button" onClick={() => downloadGeoJson(geoJsonData)}>Download GeoJSON</button>
 			<Source id="polygon-data" type="geojson" data={geoJsonData}>
 		        <Layer
 		          id="extruded-polygons"
