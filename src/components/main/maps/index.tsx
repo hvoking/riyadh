@@ -3,6 +3,7 @@ import { Wrapper } from './wrapper';
 import { Tiles } from './tiles';
 import { Layers } from './layers';
 import { Navigation } from './nav';
+import { Avatar } from './avatar';
 
 // Context imports
 import { useMapProperties } from '../../context/maps/properties';
@@ -34,6 +35,7 @@ export const Maps = () => {
 				<Tiles/>
 				<Layers/>
 				<Navigation/>
+				<Avatar/>
 			</Map>
 		</Wrapper>
 	)
