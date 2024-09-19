@@ -2,7 +2,7 @@
 import './styles.scss';
 
 // Context imports
-import { useMapProperties } from '../../../../context/maps/properties';
+import { useMapProperties } from '../../../context/maps/properties';
 
 export const Switch = () => {
 	const { setActiveBasemap } = useMapProperties();

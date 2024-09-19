@@ -2,13 +2,13 @@
 import { useState, useEffect } from 'react';
 
 // Context imports
-import { useMapProperties } from '../../../context/maps/properties';
+import { useMapProperties } from '../../context/maps/properties';
 
 // Third-party imports
-import { Marker, useMap } from 'react-map-gl';
+import { Marker } from 'react-map-gl';
 
 export const Avatar = () => {
-	const { viewport, marker, setMarker, mapRef } = useMapProperties();
+	const { marker, setMarker, mapRef } = useMapProperties();
 
     const [direction, setDirection] = useState('down');
     const [step, setStep] = useState(0);

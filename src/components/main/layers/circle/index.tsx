@@ -1,5 +1,5 @@
 // Context imports
-import { useCircle } from '../../../../context/circle';
+import { useCircle } from '../../../context/circle';
 
 // Third party imports
 import { Source, Layer, LayerProps } from 'react-map-gl';
