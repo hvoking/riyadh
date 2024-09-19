@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/riyadh/static/css/main.ba814738.css",
-    "main.js": "/riyadh/static/js/main.7b2af3df.js",
+    "main.css": "/riyadh/static/css/main.97ef256d.css",
+    "main.js": "/riyadh/static/js/main.05567df3.js",
     "static/js/879.9f1c8221.chunk.js": "/riyadh/static/js/879.9f1c8221.chunk.js",
     "index.html": "/riyadh/index.html",
-    "main.ba814738.css.map": "/riyadh/static/css/main.ba814738.css.map",
-    "main.7b2af3df.js.map": "/riyadh/static/js/main.7b2af3df.js.map",
+    "main.97ef256d.css.map": "/riyadh/static/css/main.97ef256d.css.map",
+    "main.05567df3.js.map": "/riyadh/static/js/main.05567df3.js.map",
     "879.9f1c8221.chunk.js.map": "/riyadh/static/js/879.9f1c8221.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba814738.css",
-    "static/js/main.7b2af3df.js"
+    "static/css/main.97ef256d.css",
+    "static/js/main.05567df3.js"
   ]
 }
